@@ -104,22 +104,22 @@ $(document).ready(function(){
 
     
     $(window).scroll(function(){
-                 if($(window).scrollTop()>=$(".p01").offset().top && $(window).scrollTop()<$(".p02").offset().top){
+                 if($(window).scrollTop()+".4375"==$(".p01").offset().top && $(window).scrollTop()<$(".p02").offset().top){
                     $(".nav li").css("background-color","white")//除了被點擊到的游標，其他都恢復成原來的顏色
                     $(".nav li:eq(0)").css("background-color","green")
                     $("#tip1").css("opacity","1")
     	            $("#tip2,#tip3,#tip4").css("opacity","0.5")
-                }else if($(window).scrollTop()>=$(".p02").offset().top && $(window).scrollTop()<$(".p03").offset().top){
+                }else if($(window).scrollTop()+".4375"==$(".p02").offset().top && $(window).scrollTop()<$(".p03").offset().top){
                     $(".nav li").css("background-color","white")//除了被點擊到的游標，其他都恢復成原來的顏色
                     $(".nav li:eq(1)").css("background-color","green")
                     $("#tip2").css("opacity","1")
     	            $("#tip1,#tip3,#tip4").css("opacity","0.5")
-                }else if($(window).scrollTop()>=$(".p03").offset().top && $(window).scrollTop()<$(".p04").offset().top){
+                }else if($(window).scrollTop()+".4375"==$(".p03").offset().top && $(window).scrollTop()<$(".p04").offset().top){
                     $(".nav li").css("background-color","white")//除了被點擊到的游標，其他都恢復成原來的顏色
                     $(".nav li:eq(2)").css("background-color","green")
                     $("#tip3").css("opacity","1")
     	            $("#tip2,#tip1,#tip4").css("opacity","0.5")
-                }else if($(window).scrollTop()>=$(".p04").offset().top && $(window).scrollTop()<$(".p05").offset().top){
+                }else if($(window).scrollTop()+".4375"==$(".p04").offset().top && $(window).scrollTop()<$(".p05").offset().top){
                     $(".nav li").css("background-color","white")//除了被點擊到的游標，其他都恢復成原來的顏色
                     $(".nav li:eq(3)").css("background-color","green")
                     $("#tip4").css("opacity","1")

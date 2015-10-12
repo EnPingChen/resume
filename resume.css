@@ -26,6 +26,7 @@
  	position: fixed;
  	top: 50%;
  	right: 10px;
+ 	cursor:pointer;
  }
 
  #tip1{
