@@ -204,14 +204,15 @@ $(document).ready(function(){
         mouseenter: function(){
         	$("#gototop").animate({height:'100px',width:'100px',fontSize:'28px'})
             $("#gototop").css("color","black")
-             $("#toptop").css("fontSize", "50px")
-              $("#gototop").css("opacity","1")
+                           $("#gototop").css("opacity","1")
 
         },  
         mouseleave: function(){
             $("#gototop").animate({height:'80px',width:'40px'})
             $("#gototop").css("opacity","0.5")
             $("#gototop").css("color", "white")
+            $("#p").css("fontSize", "28px")
+
 
         }, 
         click: function(){
