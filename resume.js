@@ -41,20 +41,30 @@ $(document).ready(function(){
             height: '50px',
             width: '500px'
      })
+     $(".head2").click(function(){
+        $("html,body").animate({"scrollTop":$(".p01").offset().top});
+        $(".nav li").css("background-color","white");
+        $(".nav li:eq(0)").css("background-color","green");
+        $("#tip1").css("opacity","1");
+        $("#tip2,#tip3,#tip4,#tip5").css("opacity","0.5");
+        n=1;
+    })
+
     $(".nav li:eq(0),#tip1").click(function(){
     	$("html,body").animate({"scrollTop":$(".p01").offset().top});
     	$(".nav li").css("background-color","white");
     	$(".nav li:eq(0)").css("background-color","green");
     	$("#tip1").css("opacity","1");
-    	$("#tip2,#tip3,#tip4").css("opacity","0.5");
+    	$("#tip2,#tip3,#tip4,#tip5").css("opacity","0.5");
+        n=1;
     })
     $(".nav li:eq(1),#tip2").click(function(){
     	$("html,body").animate({"scrollTop":$(".p02").offset().top});
     	$(".nav li").css("background-color","white");
     	$(".nav li:eq(1)").css("background-color","green");			
     	$("#tip2").css("opacity","1");
-    	$("#tip1,#tip3,#tip4").css("opacity","0.5");
-
+    	$("#tip1,#tip3,#tip4,#tip5").css("opacity","0.5");
+        n=2;
 
     })
     $(".nav li:eq(2),#tip3").click(function(){
@@ -62,8 +72,8 @@ $(document).ready(function(){
     	$(".nav li").css("background-color","white");
     	$(".nav li:eq(2)").css("background-color","green");
     	$("#tip3").css("opacity","1");
-    	$("#tip1,#tip2,#tip4").css("opacity","0.5");
-
+    	$("#tip1,#tip2,#tip4,tip5").css("opacity","0.5");
+        n=3;
 
     })
     $(".nav li:eq(3),#tip4").click(function(){
@@ -71,8 +81,16 @@ $(document).ready(function(){
     	$(".nav li").css("background-color","white")
     	$(".nav li:eq(3)").css("background-color","green")
     	$("#tip4").css("opacity","1")
-    	$("#tip2,#tip1,#tip3").css("opacity","0.5")
-
+    	$("#tip2,#tip1,#tip3,tip5").css("opacity","0.5")
+        n=4;
+    })
+    $(".nav li:eq(4),#tip5").click(function(){
+        $("html,body").animate({"scrollTop":$(".p05").offset().top})
+        $(".nav li").css("background-color","white")
+        $(".nav li:eq(4)").css("background-color","green")
+        $("#tip5").css("opacity","1")
+        $("#tip2,#tip1,#tip3,#tip4").css("opacity","0.5")
+        n=5;
 
     })
    $("#gototop").click(function(){
@@ -80,11 +98,12 @@ $(document).ready(function(){
     	$("#gototop").css("opacity","1");
     	    })
 
-       n=1
+        n=1
         var num_li = $("li").length
             moving=0
             $(window).mousewheel(function(e){
                 $("html,body").stop()
+
                 if(moving==0){
                     moving=1
                     if(e.deltaY==-1){
@@ -104,27 +123,49 @@ $(document).ready(function(){
 
     
     $(window).scroll(function(){
+        //console.log($(window).scrollTop())
                  if($(window).scrollTop()+".4375"==$(".p01").offset().top && $(window).scrollTop()<$(".p02").offset().top){
                     $(".nav li").css("background-color","white")//除了被點擊到的游標，其他都恢復成原來的顏色
                     $(".nav li:eq(0)").css("background-color","green")
                     $("#tip1").css("opacity","1")
-    	            $("#tip2,#tip3,#tip4").css("opacity","0.5")
+    	            $("#tip2,#tip3,#tip4,tip5").css("opacity","0.5")
+                    n=1;
+
                 }else if($(window).scrollTop()+".4375"==$(".p02").offset().top && $(window).scrollTop()<$(".p03").offset().top){
                     $(".nav li").css("background-color","white")//除了被點擊到的游標，其他都恢復成原來的顏色
                     $(".nav li:eq(1)").css("background-color","green")
                     $("#tip2").css("opacity","1")
-    	            $("#tip1,#tip3,#tip4").css("opacity","0.5")
+    	            $("#tip1,#tip3,#tip4,#tip5").css("opacity","0.5")
+                    $(".left").animate({height: '200px',width:'1000px', opacity: '0.4'},"50" );
+                    $(".left").animate({height: '50px',width:'500px', opacity: '0.4'},"50" );
+                    $(".section").slideDown("slow");
+                    n=2;
+
                 }else if($(window).scrollTop()+".4375"==$(".p03").offset().top && $(window).scrollTop()<$(".p04").offset().top){
                     $(".nav li").css("background-color","white")//除了被點擊到的游標，其他都恢復成原來的顏色
                     $(".nav li:eq(2)").css("background-color","green")
                     $("#tip3").css("opacity","1")
-    	            $("#tip2,#tip1,#tip4").css("opacity","0.5")
+    	            $("#tip2,#tip1,#tip4,#tip5").css("opacity","0.5")
+                    $(".left2").animate({height: '200px',width:'1000px', opacity: '0.4'},"50" );
+                    $(".left2").animate({height: '50px',width:'500px', opacity: '0.4'},"50" );
+                    $(".table").fadeIn("6000");
+                    n=3;
                 }else if($(window).scrollTop()+".4375"==$(".p04").offset().top && $(window).scrollTop()<$(".p05").offset().top){
                     $(".nav li").css("background-color","white")//除了被點擊到的游標，其他都恢復成原來的顏色
                     $(".nav li:eq(3)").css("background-color","green")
                     $("#tip4").css("opacity","1")
-    	            $("#tip2,#tip3,#tip1").css("opacity","0.5")
-                }            })
+    	            $("#tip2,#tip3,#tip1,#tip5").css("opacity","0.5")
+                    $(".left3").animate({height: '200px',width:'1000px', opacity: '0.4'},"50" );
+                    $(".left3").animate({height: '50px',width:'500px', opacity: '0.4'},"50" );
+                    $(".table1").slideDown("slow");
+                    n=4;
+                }else if($(window).scrollTop()+".4375"==$(".p05").offset().top ){
+                    $(".nav li").css("background-color","white")//除了被點擊到的游標，其他都恢復成原來的顏色
+                    $(".nav li:eq(4)").css("background-color","green")
+                    $("#tip5").css("opacity","1")
+                    $("#tip2,#tip3,#tip1,#tip4").css("opacity","0.5")
+                    n=5;
+                                    }              })
 
 
 

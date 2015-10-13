@@ -22,6 +22,14 @@
         background-repeat: no-repeat;
         height:100vh;
     }
+.p05{
+        background-image:url(2011060409223978.jpg);
+        background-size:cover;
+        background-repeat: no-repeat;
+        height:100vh;
+        padding: 0px;
+    }
+
  .nav{
  	position: fixed;
  	top: 50%;
@@ -41,7 +49,8 @@
  	 border-width: 0px;
     border-style: solid;
     border-color: transparent;
- 	opacity: 0.7;
+ 	opacity: 1;
+    cursor: pointer;
  }
  #tip2{
  	position: fixed;
@@ -56,6 +65,7 @@
     border-style: solid;
     border-color: transparent;
  	opacity: 0.7;
+    cursor: pointer;
  }
  #tip3{
  	position: fixed;
@@ -70,6 +80,7 @@
     border-style: solid;
     border-color: transparent;
     opacity: 0.7;
+    cursor: pointer;
  }
  #tip4{
  	position: fixed;
@@ -84,7 +95,24 @@
     border-style: solid;
     border-color: transparent;
  	opacity: 0.7;
+    cursor: pointer;
  }
+ #tip5{
+    position: fixed;
+    bottom: 0px;
+    height: 50px;
+    width: 150px;
+    left: 750px;
+    background-color: orange;
+    text-align: center;
+    border-radius: 5px;
+     border-width: 0px;
+    border-style: solid;
+    border-color: transparent;
+    opacity: 0.7;
+    cursor: pointer;
+ }
+
   li{
         width:10px;
         height:10px; 
@@ -233,5 +261,8 @@ body{
 	border-radius: 10px;
     opacity: 0.7;
     font-size: 40px;
+    cursor: pointer;
 }
-//
+.person_ex{
+    padding: 0px;
+}
