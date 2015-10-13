@@ -1,29 +1,29 @@
 .p01{
-        background-image:url(2011060409223978.jpg);
+        background-image:url(bg1.jpg);
           background-size:cover;
           background-repeat: no-repeat;
         height:100vh;
     }
 .p02{
-        background-image:url(2011060409223978.jpg);
+        background-image:url(bg2.jpg);
         background-size:cover;
         background-repeat: no-repeat;
         height:100vh;
     }
 .p03{
-        background-image:url(2011060409223978.jpg);
+        background-image:url(15241QU3-7.jpg);
         background-size:cover;
         background-repeat: no-repeat;
         height:100vh;
     }
 .p04{
-        background-image:url(2011060409223978.jpg);
+        background-image:url(2011060409214653.jpg);
         background-size:cover;
         background-repeat: no-repeat;
         height:100vh;
     }
 .p05{
-        background-image:url(2011060409223978.jpg);
+        background-image:url(tea-2.jpg);
         background-size:cover;
         background-repeat: no-repeat;
         height:100vh;
@@ -186,6 +186,7 @@ div.space{
 div.section{
   //width: 1150px;
   //height: 400px;
+  color: white;
   display: none;
 }
  div.table{

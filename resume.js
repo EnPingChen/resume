@@ -1,4 +1,5 @@
 $(document).ready(function(){
+        $("html,body").animate({"scrollTop":$(".p01").offset().top})
         var div = $(".left");
         //div.animate({height: '300px', opacity: '0.4'} );
         //div.animate({width: '300px', opacity: '0.8'});
@@ -96,6 +97,7 @@ $(document).ready(function(){
    $("#gototop").click(function(){
     	$("html,body").animate({"scrollTop":$(".p01").offset().top});
     	$("#gototop").css("opacity","1");
+        $
     	    })
 
         n=1
@@ -121,14 +123,18 @@ $(document).ready(function(){
             })	
 
 
-    
+    var first01= 0;
+    var first02= 0;
+    var first03= 0;
+    var first04= 0;
+
     $(window).scroll(function(){
         //console.log($(window).scrollTop())
                  if($(window).scrollTop()+".4375"==$(".p01").offset().top && $(window).scrollTop()<$(".p02").offset().top){
                     $(".nav li").css("background-color","white")//除了被點擊到的游標，其他都恢復成原來的顏色
                     $(".nav li:eq(0)").css("background-color","green")
                     $("#tip1").css("opacity","1")
-    	            $("#tip2,#tip3,#tip4,tip5").css("opacity","0.5")
+    	            $("#tip2,#tip3,#tip4,#tip5").css("opacity","0.5")
                     n=1;
 
                 }else if($(window).scrollTop()+".4375"==$(".p02").offset().top && $(window).scrollTop()<$(".p03").offset().top){
@@ -136,8 +142,10 @@ $(document).ready(function(){
                     $(".nav li:eq(1)").css("background-color","green")
                     $("#tip2").css("opacity","1")
     	            $("#tip1,#tip3,#tip4,#tip5").css("opacity","0.5")
+                
+                    if(first01<1){
                     $(".left").animate({height: '200px',width:'1000px', opacity: '0.4'},"50" );
-                    $(".left").animate({height: '50px',width:'500px', opacity: '0.4'},"50" );
+                    $(".left").animate({height: '50px',width:'500px', opacity: '0.4'},"50" );first01++;}
                     $(".section").slideDown("slow");
                     n=2;
 
@@ -146,8 +154,9 @@ $(document).ready(function(){
                     $(".nav li:eq(2)").css("background-color","green")
                     $("#tip3").css("opacity","1")
     	            $("#tip2,#tip1,#tip4,#tip5").css("opacity","0.5")
+                    if(first02<1){
                     $(".left2").animate({height: '200px',width:'1000px', opacity: '0.4'},"50" );
-                    $(".left2").animate({height: '50px',width:'500px', opacity: '0.4'},"50" );
+                    $(".left2").animate({height: '50px',width:'500px', opacity: '0.4'},"50" );first02++;}
                     $(".table").fadeIn("6000");
                     n=3;
                 }else if($(window).scrollTop()+".4375"==$(".p04").offset().top && $(window).scrollTop()<$(".p05").offset().top){
@@ -155,8 +164,9 @@ $(document).ready(function(){
                     $(".nav li:eq(3)").css("background-color","green")
                     $("#tip4").css("opacity","1")
     	            $("#tip2,#tip3,#tip1,#tip5").css("opacity","0.5")
+                    if (first03<1){
                     $(".left3").animate({height: '200px',width:'1000px', opacity: '0.4'},"50" );
-                    $(".left3").animate({height: '50px',width:'500px', opacity: '0.4'},"50" );
+                    $(".left3").animate({height: '50px',width:'500px', opacity: '0.4'},"50" );first03++}
                     $(".table1").slideDown("slow");
                     n=4;
                 }else if($(window).scrollTop()+".4375"==$(".p05").offset().top ){
@@ -164,7 +174,7 @@ $(document).ready(function(){
                     $(".nav li:eq(4)").css("background-color","green")
                     $("#tip5").css("opacity","1")
                     $("#tip2,#tip3,#tip1,#tip4").css("opacity","0.5")
-                    n=5;
+                                        n=5;
                                     }              })
 
 
