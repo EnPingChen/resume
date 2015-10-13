@@ -270,7 +270,7 @@ $(document).ready(function(){
             $("#gototop").css("color", "white")
             $("#gototop").animate({height:'120px',width:'120px',fontSize:'28px'})
             $("#gototop").animate({height:'80px',width:'40px',fontSize:'28px'})
-            //$("#top").css("fontSize", "")
+        
 
         } 
     })
