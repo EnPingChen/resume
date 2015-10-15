@@ -1,6 +1,3 @@
- <?php
-          echo "Hello World!";
-?>  
 
 <!DOCTYPE html>
 <html>
@@ -40,7 +37,10 @@
     <div  id = "divt" align = "center"style="background:#98bf21;height:100px;width:100px;position:absolute;"> <h1 class="intro">這是關於陳恩平的履歷表</h1></div>
        <br><br><br><br><br><br> 
           <p> <img  src="10698566_553521104793315_3343508628896807590_n.jpg" alt="Mountain View" align="bottom"><p>
-            <hr>          
+            <hr>
+            <?php
+            echo "you are a pig ";
+            ?>          
                         </div>
 
 <div class="p02">
