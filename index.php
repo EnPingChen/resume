@@ -1,3 +1,7 @@
+ <?php
+          echo "Hello World!";
+?>  
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,10 +41,7 @@
        <br><br><br><br><br><br> 
           <p> <img  src="10698566_553521104793315_3343508628896807590_n.jpg" alt="Mountain View" align="bottom"><p>
             <hr>          
-             <?php
-          echo "Hello World!";
-              ?>  
-            </div>
+                        </div>
 
 <div class="p02">
              <div class="left"><h1 id="a">自傳</h1></div>
